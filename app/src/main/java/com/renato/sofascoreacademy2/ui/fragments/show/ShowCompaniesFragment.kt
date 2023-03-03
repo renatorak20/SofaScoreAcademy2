@@ -1,4 +1,4 @@
-package com.renato.sofascoreacademy2.ui.fragments.create
+package com.renato.sofascoreacademy2.ui.fragments.show
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -9,7 +9,11 @@ import android.view.ViewGroup
 import com.renato.sofascoreacademy2.R
 import com.renato.sofascoreacademy2.ui.fragments.CompanyViewModel
 
-class CreateCompanyFragment : Fragment() {
+class ShowCompaniesFragment : Fragment() {
+
+    companion object {
+        fun newInstance() = ShowCompaniesFragment()
+    }
 
     private lateinit var viewModel: CompanyViewModel
 
@@ -17,12 +21,13 @@ class CreateCompanyFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_create_company, container, false)
+        return inflater.inflate(R.layout.fragment_show_companies, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(requireActivity()).get(CompanyViewModel::class.java)
+
     }
 
 }

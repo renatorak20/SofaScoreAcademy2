@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">SofaScoreAcademy2</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_1">Create</string>
+    <string name="tab_text_2">Show</string>
     <string name="create_company">Create a company</string>
+
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="website">Website</string>
+    <string name="contact_name">Contact name</string>
+    <string name="contact_phone">Contact phone</string>
+    <string name="contact_email">Contact email</string>
+    <string name="product">Product</string>
+    <string name="industry">Industry</string>
 </resources>
