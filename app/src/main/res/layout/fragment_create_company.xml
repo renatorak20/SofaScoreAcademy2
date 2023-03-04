@@ -16,7 +16,7 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
@@ -24,6 +24,7 @@
                 android:layout_marginTop="20dp"/>
 
             <EditText
+                android:id="@+id/name_field"
                 android:layout_width="161dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/name"
@@ -34,7 +35,7 @@
                 android:layout_marginTop="20dp"/>
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/address_field"
                 android:layout_width="161dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/address"
@@ -45,29 +46,51 @@
                 android:layout_marginTop="20dp"/>
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/city_field"
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/city"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                android:importantForAutofill="no"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/country_field"
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/country"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                android:importantForAutofill="no"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/phone_field"
                 android:layout_width="161dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/phone"
-                android:inputType="text"
+                android:inputType="phone"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
                 android:importantForAutofill="no"
                 android:layout_marginTop="20dp"/>
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/email_field"
                 android:layout_width="161dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/email"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
                 android:importantForAutofill="no"
                 android:layout_marginTop="20dp"/>
 
             <EditText
-                android:id="@+id/editText7"
+                android:id="@+id/website_field"
                 android:layout_width="161dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/website"
@@ -78,51 +101,7 @@
                 android:layout_marginTop="20dp"/>
 
             <EditText
-                android:id="@+id/editText8"
-                android:layout_width="161dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/contact_name"
-                android:inputType="text"
-                android:minHeight="48dp"
-                android:textColorHint="#757575"
-                android:importantForAutofill="no"
-                android:layout_marginTop="20dp"/>
-
-            <EditText
-                android:id="@+id/editText9"
-                android:layout_width="161dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/contact_phone"
-                android:inputType="phone"
-                android:minHeight="48dp"
-                android:textColorHint="#757575"
-                android:importantForAutofill="no"
-                android:layout_marginTop="20dp"/>
-
-            <EditText
-                android:id="@+id/editText10"
-                android:layout_width="161dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/contact_email"
-                android:inputType="text"
-                android:minHeight="48dp"
-                android:textColorHint="#757575"
-                android:importantForAutofill="no"
-                android:layout_marginTop="20dp"/>
-
-            <EditText
-                android:id="@+id/editText11"
-                android:layout_width="161dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/product"
-                android:inputType="text"
-                android:minHeight="48dp"
-                android:textColorHint="#757575"
-                android:importantForAutofill="no"
-                android:layout_marginTop="20dp"/>
-
-            <EditText
-                android:id="@+id/editText12"
+                android:id="@+id/industry_field"
                 android:layout_width="161dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/industry"
@@ -130,6 +109,28 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/description_field"
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/description"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                android:importantForAutofill="no"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/year_field"
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/year_founded"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                android:importantForAutofill="no"
                 android:layout_marginTop="20dp"/>
 
             <Button

@@ -6,7 +6,18 @@ import androidx.lifecycle.ViewModel
 import com.renato.sofascoreacademy2.entities.Company
 
 class CompanyViewModel : ViewModel() {
-    private val _company = MutableLiveData<List<Company>>()
-    val company: LiveData<List<Company>> = _company
+    private val _companies = MutableLiveData<MutableList<Company>>()
+    val companies : LiveData<MutableList<Company>>
+        get() = _companies
 
+
+    fun addCompany(company: Company) {
+        val list = _companies.value?.toMutableList() ?: mutableListOf()
+        list.add(company)
+        _companies.value = list
+    }
+
+    fun getList(): MutableLiveData<MutableList<Company>> {
+        return _companies
+    }
 }

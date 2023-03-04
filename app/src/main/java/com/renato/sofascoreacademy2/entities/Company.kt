@@ -12,3 +12,5 @@ class Company(
     val description: String,
     val foundedYear: String
 )
+
+

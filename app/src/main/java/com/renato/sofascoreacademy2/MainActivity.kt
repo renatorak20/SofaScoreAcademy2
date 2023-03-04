@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         val sectionsPagerAdapter = SectionsPagerAdapter(this)
         val viewPager: ViewPager2 = binding.viewPager
         viewPager.adapter = sectionsPagerAdapter
+        
         val tabs: TabLayout = binding.tabs
         TabLayoutMediator(tabs, viewPager){
             tab, position -> when(position){
