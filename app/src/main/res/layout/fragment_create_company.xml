@@ -10,6 +10,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
@@ -19,16 +20,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
-                android:text="@string/create_company" />
+                android:text="@string/create_company_title"
+                android:layout_marginTop="20dp"/>
 
             <EditText
                 android:layout_width="161dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/name"
-                android:importantForAutofill="no"
                 android:inputType="text"
                 android:minHeight="48dp"
-                android:textColorHint="#757575" />
+                android:textColorHint="#757575"
+                android:importantForAutofill="no"
+                android:layout_marginTop="20dp"/>
 
             <EditText
                 android:id="@+id/editText3"
@@ -38,7 +41,8 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:layout_marginTop="20dp"/>
 
             <EditText
                 android:id="@+id/editText4"
@@ -48,7 +52,8 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:layout_marginTop="20dp"/>
 
             <EditText
                 android:id="@+id/editText5"
@@ -58,7 +63,8 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:layout_marginTop="20dp"/>
 
             <EditText
                 android:id="@+id/editText7"
@@ -68,7 +74,8 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:layout_marginTop="20dp"/>
 
             <EditText
                 android:id="@+id/editText8"
@@ -78,7 +85,8 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:layout_marginTop="20dp"/>
 
             <EditText
                 android:id="@+id/editText9"
@@ -88,7 +96,8 @@
                 android:inputType="phone"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:layout_marginTop="20dp"/>
 
             <EditText
                 android:id="@+id/editText10"
@@ -98,7 +107,8 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:layout_marginTop="20dp"/>
 
             <EditText
                 android:id="@+id/editText11"
@@ -108,7 +118,8 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:layout_marginTop="20dp"/>
 
             <EditText
                 android:id="@+id/editText12"
@@ -118,7 +129,16 @@
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:minHeight="48dp"
-                android:textColorHint="#757575" />
+                android:textColorHint="#757575"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/create_button" />
 
         </LinearLayout>
     </ScrollView>

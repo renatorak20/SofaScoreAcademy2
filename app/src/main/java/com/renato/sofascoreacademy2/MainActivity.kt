@@ -33,7 +33,10 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = binding.tabs
         TabLayoutMediator(tabs, viewPager){
-            tab, position -> tab.text = "Item ${(position + 1)}"
+            tab, position -> when(position){
+                0 -> tab.text = "Create"
+                else -> tab.text = "Show"
+        }
         }.attach()
 
 
