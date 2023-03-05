@@ -3,7 +3,6 @@ package com.renato.sofascoreacademy2.ui.main
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.renato.sofascoreacademy2.R
 import com.renato.sofascoreacademy2.ui.fragments.CreateCompanyFragment
 import com.renato.sofascoreacademy2.ui.fragments.ShowCompaniesFragment
 

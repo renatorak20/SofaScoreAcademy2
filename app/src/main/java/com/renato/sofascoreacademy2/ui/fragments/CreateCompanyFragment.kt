@@ -1,13 +1,13 @@
 package com.renato.sofascoreacademy2.ui.fragments
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import com.renato.sofascoreacademy2.R
 import com.renato.sofascoreacademy2.entities.Company
@@ -16,25 +16,25 @@ class CreateCompanyFragment : Fragment() {
 
     private lateinit var viewModel: CompanyViewModel
 
-    private lateinit var nameField:EditText
-    private lateinit var addressField:EditText
-    private lateinit var cityField:EditText
-    private lateinit var countryField:EditText
-    private lateinit var phoneField:EditText
-    private lateinit var emailField:EditText
-    private lateinit var websiteField:EditText
-    private lateinit var industryField:EditText
-    private lateinit var descriptionField:EditText
-    private lateinit var yearField:EditText
-    private lateinit var createButton:Button
+    private lateinit var nameField: EditText
+    private lateinit var addressField: EditText
+    private lateinit var cityField: EditText
+    private lateinit var countryField: EditText
+    private lateinit var phoneField: EditText
+    private lateinit var emailField: EditText
+    private lateinit var websiteField: EditText
+    private lateinit var industryField: EditText
+    private lateinit var descriptionField: EditText
+    private lateinit var yearField: EditText
+    private lateinit var createButton: Button
 
-    private lateinit var fields:ArrayList<EditText>
+    private lateinit var fields: ArrayList<EditText>
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         val view = inflater.inflate(R.layout.fragment_create_company, container, false)
 
         nameField = view.findViewById(R.id.name_field)
@@ -51,9 +51,11 @@ class CreateCompanyFragment : Fragment() {
 
         viewModel = ViewModelProvider(requireActivity())[CompanyViewModel::class.java]
 
-        fields = arrayListOf(nameField, addressField, phoneField, emailField, websiteField,
+        fields = arrayListOf(
+            nameField, addressField, phoneField, emailField, websiteField,
             cityField, countryField, descriptionField, yearField,
-            industryField)
+            industryField
+        )
 
         return view
     }
@@ -61,27 +63,27 @@ class CreateCompanyFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-       createButton.setOnClickListener{
-           if(areEmpty(fields)){
-               Snackbar.make(view, "Please fill out all fields!", Snackbar.LENGTH_SHORT).show()
-           }else{
-               val newCompany = Company(nameField.text.toString(),addressField.text.toString(), cityField.text.toString(), countryField.text.toString(), phoneField.text.toString(), emailField.text.toString(), websiteField.text.toString(), industryField.text.toString(), descriptionField.text.toString(), yearField.text.toString())
-               viewModel.addCompany(newCompany)
-               resetFields(fields)
-           }
-       }
+        createButton.setOnClickListener {
+            if (areEmpty(fields)) {
+                Snackbar.make(view, "Please fill out all fields!", Snackbar.LENGTH_SHORT).show()
+            } else {
+                val newCompany = Company(nameField.text.toString(), addressField.text.toString(), cityField.text.toString(), countryField.text.toString(), phoneField.text.toString(), emailField.text.toString(), websiteField.text.toString(), industryField.text.toString(), descriptionField.text.toString(), yearField.text.toString())
+                viewModel.addCompany(newCompany)
+                resetFields(fields)
+            }
+        }
     }
 
-    private fun areEmpty(fields: List<EditText>):Boolean{
-        for(field in fields){
-            if(field.text.toString() == ""){
+    private fun areEmpty(fields: List<EditText>): Boolean {
+        for (field in fields) {
+            if (field.text.toString() == "") {
                 return true
             }
         }
         return false
     }
-    private fun resetFields(fields: List<EditText>){
-        for(field in fields){
+    private fun resetFields(fields: List<EditText>) {
+        for (field in fields) {
             field.text = null
         }
     }

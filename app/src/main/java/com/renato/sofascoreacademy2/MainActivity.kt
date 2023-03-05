@@ -1,18 +1,18 @@
 package com.renato.sofascoreacademy2
 
 import android.os.Bundle
-import com.google.android.material.tabs.TabLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.renato.sofascoreacademy2.ui.main.SectionsPagerAdapter
 import com.renato.sofascoreacademy2.databinding.ActivityMainBinding
 import com.renato.sofascoreacademy2.ui.fragments.CompanyViewModel
+import com.renato.sofascoreacademy2.ui.main.SectionsPagerAdapter
 
 val tabArray = arrayOf(
     R.string.tab_text_create,
-    R.string.tab_text_show,
+    R.string.tab_text_show
 )
 
 class MainActivity : AppCompatActivity() {
@@ -31,15 +31,14 @@ class MainActivity : AppCompatActivity() {
         val sectionsPagerAdapter = SectionsPagerAdapter(this)
         val viewPager: ViewPager2 = binding.viewPager
         viewPager.adapter = sectionsPagerAdapter
-        
+
         val tabs: TabLayout = binding.tabs
-        TabLayoutMediator(tabs, viewPager){
-            tab, position -> when(position){
+        TabLayoutMediator(tabs, viewPager) {
+                tab, position ->
+            when (position) {
                 0 -> tab.text = getString(tabArray[0])
                 else -> tab.text = getString(tabArray[1])
-        }
+            }
         }.attach()
-
-
     }
 }

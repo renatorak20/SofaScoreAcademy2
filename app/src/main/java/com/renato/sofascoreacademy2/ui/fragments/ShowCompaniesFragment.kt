@@ -8,9 +8,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.divider.MaterialDivider
-import com.google.android.material.divider.MaterialDividerItemDecoration
 import com.renato.sofascoreacademy2.R
 
 class ShowCompaniesFragment : Fragment() {
@@ -18,10 +16,11 @@ class ShowCompaniesFragment : Fragment() {
     private lateinit var viewModel: CompanyViewModel
     private lateinit var companiesInflater: LayoutInflater
 
-    private lateinit var linearLayout:LinearLayout
+    private lateinit var linearLayout: LinearLayout
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         viewModel = ViewModelProvider(requireActivity())[CompanyViewModel::class.java]
@@ -34,20 +33,18 @@ class ShowCompaniesFragment : Fragment() {
         return view
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.getList().observe(viewLifecycleOwner) { list ->
             linearLayout.removeAllViews()
             list.forEach { item ->
-                    val string = item.name + ", " + item.address + ", " + item.city + ", " + item.country + ", " + item.phone + ", " + item.email + ", " + item.website + ", " + item.industry + ", " + item.description + ", " + item.foundedYear
-                    val textView = TextView(requireContext())
-                    textView.text = string
-                    linearLayout.addView(textView)
-                    val divider = MaterialDivider(requireContext())
-                    linearLayout.addView(divider)
+                val string = item.name + ", " + item.address + ", " + item.city + ", " + item.country + ", " + item.phone + ", " + item.email + ", " + item.website + ", " + item.industry + ", " + item.description + ", " + item.foundedYear
+                val textView = TextView(requireContext())
+                textView.text = string
+                linearLayout.addView(textView)
+                val divider = MaterialDivider(requireContext())
+                linearLayout.addView(divider)
             }
-
         }
     }
 }
