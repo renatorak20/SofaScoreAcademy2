@@ -1,21 +1,16 @@
-package com.renato.sofascoreacademy2.ui.fragments.create
+package com.renato.sofascoreacademy2.ui.fragments
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.MutableLiveData
 import com.google.android.material.snackbar.Snackbar
 import com.renato.sofascoreacademy2.R
-import com.renato.sofascoreacademy2.databinding.FragmentCreateCompanyBinding
 import com.renato.sofascoreacademy2.entities.Company
-import com.renato.sofascoreacademy2.ui.fragments.CompanyViewModel
 
 class CreateCompanyFragment : Fragment() {
 
@@ -70,7 +65,6 @@ class CreateCompanyFragment : Fragment() {
            if(areEmpty(fields)){
                Snackbar.make(view, "Please fill out all fields!", Snackbar.LENGTH_SHORT).show()
            }else{
-
                val newCompany = Company(nameField.text.toString(),addressField.text.toString(), cityField.text.toString(), countryField.text.toString(), phoneField.text.toString(), emailField.text.toString(), websiteField.text.toString(), industryField.text.toString(), descriptionField.text.toString(), yearField.text.toString())
                viewModel.addCompany(newCompany)
                resetFields(fields)
@@ -78,7 +72,7 @@ class CreateCompanyFragment : Fragment() {
        }
     }
 
-    fun areEmpty(fields: List<EditText>):Boolean{
+    private fun areEmpty(fields: List<EditText>):Boolean{
         for(field in fields){
             if(field.text.toString() == ""){
                 return true
@@ -86,7 +80,7 @@ class CreateCompanyFragment : Fragment() {
         }
         return false
     }
-    fun resetFields(fields: List<EditText>){
+    private fun resetFields(fields: List<EditText>){
         for(field in fields){
             field.text = null
         }

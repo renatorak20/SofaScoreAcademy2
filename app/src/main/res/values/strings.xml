@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SofaScoreAcademy2</string>
-    <string name="tab_text_1">Create</string>
-    <string name="tab_text_2">Show</string>
+    <string name="tab_text_create">Create</string>
+    <string name="tab_text_show">Show</string>
     <string name="create_company_title">Create a company</string>
 
     <string name="name">Name</string>

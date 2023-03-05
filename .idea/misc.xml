@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy2/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy2/app/src/main/res/layout/company_element.xml" value="0.33" />
+        <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy2/app/src/main/res/layout/divider.xml" value="0.2318840579710145" />
         <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy2/app/src/main/res/layout/fragment_create_company.xml" value="0.33" />
         <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy2/app/src/main/res/layout/fragment_main.xml" value="0.33" />
         <entry key="..\:/Users/renat/AndroidStudioProjects/SofaScoreAcademy2/app/src/main/res/layout/fragment_show_companies.xml" value="0.36666666666666664" />
